@@ -8,6 +8,9 @@ import Processes from '../components/Processes'
 import StepsCards from '../components/Benefits'
 import Benefits from '../components/Benefits'
 import JoinWaitlistCTA from '../components/JoinWaitlistCta'
+import FAQ from '../components/Faq'
+import TestCard from '../components/TestCard'
+import Testimonials from '../components/Testimonial'
 
 const Home = () => {
   return (
@@ -18,7 +21,9 @@ const Home = () => {
       <How />
       <Processes />
       < Benefits/>
-      <JoinWaitlistCTA />
+      <Testimonials />
+      <FAQ />
+      {/* <JoinWaitlistCTA /> */}
       <Footer />
     </div>
   )

@@ -6,6 +6,9 @@ import goal from '../Assets/Images/goal.png';
 import pers from '../Assets/Images/pers.png';
 import cert from '../Assets/Images/cert.png';
 import pattern1 from '../Assets/Images/Ellipse 29.png';
+import identify from '../Assets/Images/Group 1000003980.png'
+import guidiance from '../Assets/Images/Group 1000003981.png'
+import track from '../Assets/Images/Group 1000003982.png'
 
 const Processes = () => {
   const controls = useAnimation();
@@ -50,18 +53,25 @@ const Processes = () => {
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className='relative mt-[40px] h-full md:h-[450px] w-full'
+      className='relative mt-[40px] mb-[50px] h-full  w-full'
     >
       {/* Background Pattern */}
-      <motion.img 
-        src={pattern1} 
-        alt="Pattern" 
-        className="absolute md:block hidden bottom-20 right-0 w-[200px] h-[200px] md:w-[200px] md:h-[200px] object-contain z-0" 
-        variants={cardVariants} 
-      />
-
-      <div className="text-[32px] font-[600] text-[#FF8C00] mb-[40px] text-center relative z-10">
+      
+<h2 className=" text-[28px] font-[500] text-[#00192E] text-center mb-[10px]  ">How it Works</h2>
+<div className=" justify-center items-center flex  bg-[#ff8c00] h-[5px] w-[60px] rounded-[40px] mx-auto mb-[50px] "></div>
+      <div className="text-[48px] font-[600] text-[#00192E] mb-[40px] text-center relative z-10">
         Your 3-Step Process
+      </div>
+
+      <div className="  flex justify-center mb-[20px] gap-[65px] items-center  ">
+        <img src={identify} alt="" className=" w-[150px] h-[150px] " />
+         <div className=" w-[100px] h-[3px] bg-[#00192e] "></div>
+
+        <img src={guidiance} alt="" className="  h-[150px] w-[150px] " />
+        
+        <div className=" w-[100px] h-[3px] bg-[#00192e] "></div>
+
+        <img src={track} alt="" className=" w-[150px] h-[150px] " />
       </div>
       
       <motion.div 
@@ -71,25 +81,25 @@ const Processes = () => {
         <motion.div variants={cardVariants}>
           <Cards
             imageSrc={goal}
-            title="Goal Setting"
-            bodyText="A dedicated space for Nigerian users to connect, share experiences, and support each other within their local context."
-            bgColor="bg-[#007BE5]"
+            title="Identify goals - Define Your Path:"
+            bodyText="Discover and set clear career and life goals that align with your strengths and aspirations."
+            // bgColor="bg-[#007BE5]"
           />
         </motion.div>
         <motion.div variants={cardVariants}>
           <Cards
             imageSrc={cert}
-            title="Certification"
-            bodyText="Achieving milestones through certifications and career development."
-            bgColor="bg-[#007BE5]"
+            title="Get guidance - Receive Personalized Recommendations"
+            bodyText="Access tailored advice, resources, and action plans to help you grow and achieve your goals."
+            // bgColor="bg-[#007BE5]"
           />
         </motion.div>
         <motion.div variants={cardVariants}>
           <Cards
-            imageSrc={pers}
-            title="Personal Growth"
-            bodyText="Tools and resources for personal and professional development."
-            bgColor="bg-[#007BE5]"
+            // imageSrc={pers}
+            title="Track progress - Stay on Course:"
+            bodyText="Monitor your achievements and milestones as you progress toward your goals, adjusting as needed to stay focused and achieve success."
+            // bgColor="bg-[#007BE5]"
           />
         </motion.div>
       </motion.div>

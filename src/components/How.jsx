@@ -3,6 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import how from '../Assets/Images/how.png';
 import pattern1 from '../Assets/Images/Dot group 2.png';
+import tick from '../Assets/Images/SVG (1).png'
 
 const How = () => {
   const controls = useAnimation();
@@ -47,7 +48,7 @@ const How = () => {
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className="relative w-full flex flex-col-reverse md:flex-row justify-end items-center p-6 md:p-12 mt-16 gap-8 md:gap-12"
+      className="relative w-full flex flex-col-reverse md:flex-row justify-around items-center p-6 md:p-12 mt-16 gap-8 md:gap-12"
     >
       <motion.img 
         src={pattern1} 
@@ -56,12 +57,19 @@ const How = () => {
         variants={patternVariants} 
       />
 
+<motion.div 
+        className="relative z-10 w-full md:w-[400px] hidden md:flex justify-center md:justify-start"
+        variants={patternVariants}
+      >
+        <img src={how} alt="Why choose us" className="w-full h-auto md:h-[350px] rounded-[20px] object-cover" />
+      </motion.div>
+
       <motion.div 
-        className="relative z-10 w-full md:w-[500px] flex flex-col justify-center md:justify-start gap-4"
+        className="relative z-10 w-full md:w-[600px] flex flex-col justify-center md:justify-start gap-4"
         variants={containerVariants}
       >
         <motion.div 
-          className="text-xl md:text-2xl font-medium text-[#FF8C00] md:text-left mb-2"
+          className="text-xl md:text-xl font-400 w-[101px] justify-center flex h-[30px] text-white rounded-[40px] bg-[#FF8C00] md:text-left mb-2"
           variants={patternVariants}
         >
           Our How
@@ -74,30 +82,28 @@ const How = () => {
         </motion.div>
 
         <motion.div className="" variants={patternVariants}>
-          <img src={how} alt="Why choose us" className="w-full md:hidden flex h-auto md:h-[550px] object-cover" />
+          <img src={how} alt="Why choose us" className="w-full md:hidden flex  h-auto md:h-[550px] object-cover" />
         </motion.div>  
 
         <motion.div 
-          className="text-lg md:text-xl font-normal text-black mb-4"
+          className="text-lg md:text-xl font-normal text-black mb-4 flex items-start gap-[7px] "
           variants={patternVariants}
         >
+          <img src={tick} alt="" className=" w-[25px] h-[25px] " />
+          <span className="text-lg md:text-xl font-normal text-black mb-4">
           AI Africa's solution is a comprehensive platform that leverages AI-powered assessments and tailored recommendations to guide users towards their ideal career paths. By offering personalized support through virtual mentorship, AI Africa provides users with the tools they need to navigate their career journey effectively. This innovative approach ensures that each user receives individualized guidance, helping them to make informed decisions about their future. The platform's assessments analyze a user's skills, interests, and goals, matching them with suitable career opportunities that align with their strengths and aspirations.
+          </span>
         </motion.div>
 
-        <motion.div 
+        {/* <motion.div 
           className="w-[120px] h-[45px] bg-[#FF8C00] cursor-pointer flex justify-center items-center rounded-full text-white font-medium text-center"
           variants={patternVariants}
         >
           Read More
-        </motion.div>
+        </motion.div> */}
       </motion.div>
       
-      <motion.div 
-        className="relative z-10 w-full md:w-[400px] hidden md:flex justify-center md:justify-start"
-        variants={patternVariants}
-      >
-        <img src={how} alt="Why choose us" className="w-full h-auto md:h-[550px] object-cover" />
-      </motion.div>
+     
     </motion.div>
   );
 };

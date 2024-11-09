@@ -7,6 +7,9 @@ import fb from '../Assets/Images/fe_facebook.png';
 import twitter from '../Assets/Images/akar-icons_twitter-fill.png';
 import link from '../Assets/Images/bi_linkedin.png';
 import ig from '../Assets/Images/ri_instagram-fill.png';
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import symbol from '../Assets/Images/Symbol.png'
+
 
 const Footer = () => {
   const controls = useAnimation();
@@ -50,51 +53,52 @@ const Footer = () => {
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className="mt-[120px] w-full md:rounded-tl-[40px] md:rounded-tr-[40px] bg-[#007BE5] py-10"
+      className="mt-[120px] w-full  bg-[#007BE5] h-[320px] py-1"
     >
-      <div className="flex flex-col mx-auto px-8 md:px-10 lg:px-20 mt-[80px] max-w-4xl text-center">
-        <motion.h2
-          className="text-white text-3xl md:text-4xl font-semibold"
-          variants={containerVariants}
-        >
-          Take Control of Your Future With AI Africa
-        </motion.h2>
-        <motion.p
-          className="mt-4 text-white text-base md:text-lg"
-          variants={containerVariants}
-        >
-          Are you ready to achieve your life goals? Don’t miss out on the opportunity to discover your passions and a world of dreams made possible with AI Africa, your personalized AI guide.
-        </motion.p>
+      <div className="flex flex-col  px-8 md:px-10 lg:px-20 mt-[80px]  text-center">
+    
         <motion.div
-          className="mt-[65px] text-white font-bold text-lg"
+          className=" mt-[10px] border-b-[1px] pb-[30px] mb-[20px] flex justify-between items-center "
           variants={containerVariants}
         >
-          AI AFRICA
+          <div className=" flex gap-[20px] ">
+            <h3 className=" text-[20px] font-[400] text-white ">About Us</h3>
+            <h3 className=" text-[20px] font-[400] text-white "> FAQs </h3>
+          </div>
+          <div className=" flex gap-[40px] ">
+            <FaYoutube size={20} color='#fff' />
+            <FaFacebook size={20} color='#fff' />
+            <FaTwitter size={20} color='#fff' />
+            <FaInstagram size={20} color='#fff'  />
+          </div>
         </motion.div>
         <motion.div
-          className="mt-[70px] flex justify-center items-center gap-[10px]"
+          className="mt-[70px] flex justify-between  items-center gap-[10px]"
           variants={containerVariants}
         >
-          <motion.img
-            src={google}
-            alt="Google Play Store"
-            className="cursor-pointer w-[171px] h-[54px]"
-            variants={iconVariants}
-          />
-          <motion.img
-            src={app}
-            alt="App Store"
-            className="cursor-pointer w-[171px] h-[54px]"
-            variants={iconVariants}
-          />
+          <div className=" flex gap-[10px] items-center ">
+            <div className=" w-[210px] h-[50px] bg-[#FF8C00] rounded-[10px] "></div>
+            <div className=" w-[210px] h-[50px] bg-[#FF8C00] rounded-[10px] "></div>
+          </div>
+
+          <div className="flex gap-[5px] items-center ">
+<img src={symbol} alt="" className=" w-[40px] h-[40px] " />
+      <div className="text-[32px] text-[white] font-bold">AI AFRICA</div>
+      </div>
+
+       <div className=" flex gap-[20px] ">
+        <h3 className=" text-[20px] text-white font-[400] ">Terms of Service </h3>
+        <h3 className=" text-[20px] text-white font-[400] ">Privacy Policy</h3>
+       </div>
+
         </motion.div>
-        <motion.div
+        {/* <motion.div
           className="text-[12px] font-normal text-white mt-[120px]"
           variants={containerVariants}
         >
           @ COPYRIGHT | AI Africa 2024 | All Rights Reserved
-        </motion.div>
-        <motion.div
+        </motion.div> */}
+        {/* <motion.div
           className="flex justify-center mt-[20px] items-center gap-[10px]"
           variants={containerVariants}
         >
@@ -122,7 +126,7 @@ const Footer = () => {
             className="cursor-pointer w-[30px] h-[30px]"
             variants={iconVariants}
           />
-        </motion.div>
+        </motion.div> */}
       </div>
     </motion.div>
   );

@@ -6,10 +6,10 @@ const Cards = ({ imageSrc, title, bodyText, bgColor }) => {
       className={`flex flex-col items-center justify-center w-[370px] h-[222px] rounded-[10px] p-4 ${bgColor}`}
     >
       <div className="mb-2">
-        <img src={imageSrc} alt="" className="w-[60px] h-[60px]" />
+        {/* <img src={imageSrc} alt="" className="w-[60px] h-[60px]" /> */}
       </div>
-      <div className="text-white text-[18px] font-bold text-center">{title}</div>
-      <div className="text-white text-[14px] mt-2 text-center">{bodyText}</div>
+      <div className="text-[#00192e] text-[24px] font-[500] text-center">{title}</div>
+      <div className="text-[#8A8A8A] text-[16px] mt-2 text-center">{bodyText}</div>
     </div>
   );
 };

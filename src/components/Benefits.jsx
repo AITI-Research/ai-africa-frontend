@@ -49,49 +49,60 @@ const Benefits = () => {
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className='mb-[50px] py-[80px] px-[20px] md:px-[40px] mt-[80px] md:mt-[0px] w-full bg-[#007BE5]'
+      className='mb-[50px] py-[80px] px-[20px] md:px-[40px] mt-[80px] md:mt-[0px] w-full'
     >
-      <div className="text-[28px] md:text-[40px] font-[600] text-white mb-[30px] md:mb-[40px] text-center">
+      <h2 className=" text-[28px] font-[500] text-[#00192E] text-center mb-[10px]  ">How we can help you</h2>
+<div className=" justify-center items-center flex  bg-[#ff8c00] h-[5px] w-[60px] rounded-[40px] mx-auto mb-[50px] "></div>
+
+      <div className="text-[28px] md:text-[40px] text-[#00192e] font-[600]  mb-[40px] md:mb-[40px] text-center">
         Get The Best Out of AI Africa
       </div>
-      <div className="flex flex-col mt-[40px] items-center justify-center gap-[30px] md:gap-[70px]">
-        <motion.div
+      <div className="flex flex-row mt-[40px] items-center justify-around h-[350px] px-3 rounded-[40px] gap-[10px] bg-[#007BE5] ">
+        {/* <motion.div
           className="flex flex-col md:flex-row gap-[40px] md:gap-[80px]"
           variants={containerVariants}
-        >
-          <motion.div variants={cardVariants}>
+        > */}
+          {/* <motion.div variants={cardVariants}>
             <BenefitsCard
               imageSrc={stats}
               title='Skill Development Resources (Nigeria)'
               bodyText="Access to curated online courses, workshops, and training programs relevant to the Nigerian job market."
             />
-          </motion.div>
+          </motion.div> */}
           <motion.div variants={cardVariants}>
             <BenefitsCard
               imageSrc={ppl}
-              title="Mentorship & Networking"
-              bodyText="Connect users with experienced Nigerian professionals and mentors who understand the local context."
+              title="Self-assessment"
+              bodyText="Evaluate your strengths, skills, academic background, and interests to gain insight into your ideal career path.."
             />
-          </motion.div>
+          {/* </motion.div> */}
         </motion.div>
-        <motion.div
-          className="flex flex-col md:flex-row gap-[40px] md:gap-[80px] mt-[30px]"
+        {/* <motion.div
+          className="fl"
           variants={containerVariants}
-        >
+        
+        > */}
+
+        <div className=" h-[200px] w-[2px]  bg-[#EDF0EE40] "></div>
+
           <motion.div variants={cardVariants}>
             <BenefitsCard
               imageSrc={brief}
-              title="Job & Internship Opportunities"
-              bodyText="Platform for discovering internship and job opportunities specifically in Nigeria."
+              title="Personalized guidance"
+              bodyText="Access customized and personalized  recommendations on skills, and learning pathways to support your journey."
             />
           </motion.div>
+
+          <div className=" h-[200px] w-[2px]  bg-[#EDF0EE40] "></div>
+
+
           <motion.div variants={cardVariants}>
             <BenefitsCard
               imageSrc={brief}
-              title="At vero eos & Accusamus"
-              bodyText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+              title="Action planning"
+              bodyText="Set achievable milestones and develop a step-by-step plan to reach your personal and professional goals."
             />
-          </motion.div>
+          {/* </motion.div> */}
         </motion.div>
       </div>
     </motion.div>

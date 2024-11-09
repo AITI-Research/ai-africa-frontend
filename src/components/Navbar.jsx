@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import rocket from '../Assets/Images/rocket.png'
+import symbol from '../Assets/Images/Symbol.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,19 +13,22 @@ const Navbar = () => {
   return (
     <div className="h-[80px] w-full flex items-center justify-between px-[25px] md:px-[80px] py-[10px] bg-white md:shadow-none shadow-md ">
       {/* Logo */}
-      <div className="text-[24px] text-[#0E0D17] font-bold">AI AFRICA</div>
+      <div className="flex gap-[5px] items-center ">
+<img src={symbol} alt="" className=" w-[25px] h-[25px] " />
+      <div className="text-[18px] text-[#007BE5] font-bold">AI AFRICA</div>
+      </div>
 
       {/* Desktop Links */}
       <div className="hidden lg:flex flex-1 justify-center items-center gap-[50px]">
-        <a href="#home" className="text-[16px] font-bold text-[#0E0D17]">Home</a>
-        <a href="#about" className="text-[16px] font-bold text-[#0E0D17]">About Us</a>
-        <a href="#faqs" className="text-[16px] font-bold text-[#0E0D17]">FAQs</a>
+        <a href="#home" className="text-[16px] font-[400] text-[#0E0D17]   hover:text-orange-600 ">Home</a>
+        <a href="#about" className="text-[16px] font-[400] text-[#0E0D17]   hover:text-orange-600 ">About Us</a>
+        <a href="#faqs" className="text-[16px] font-[400] text-[#0E0D17]    hover:text-orange-600 ">FAQs</a>
       </div>
 
       {/* Desktop Get Started Button */}
       <div className="hidden lg:flex">
         <button
-          className="cursor-pointer w-[228px] h-[60px] rounded-[30px] flex justify-center gap-[5px] items-center bg-[#FF8C00]"
+          className="cursor-pointer w-[158px] h-[50px] rounded-[30px] flex justify-center gap-[5px] items-center bg-[#FF8C00]"
         >
           <img src={rocket} alt="" className=" w-[20px] h-[20px] " />
           <div className="text-[#fafafa] text-[16px] font-bold">Get Started</div>
